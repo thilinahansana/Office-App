@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-export default function DashboardCard({ title, description, to }) {
+export default function DashboardCard({ icon, index, title, description, cta, to }) {
   const navigate = useNavigate();
 
   return (
@@ -11,8 +11,19 @@ export default function DashboardCard({ title, description, to }) {
       onClick={() => navigate(to)}
       onKeyDown={(e) => e.key === 'Enter' && navigate(to)}
     >
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <div className="dashboard-card__visual">
+        <span className="dashboard-card__icon" aria-hidden="true">
+          {icon}
+        </span>
+      </div>
+      <span className="dashboard-card__number" aria-hidden="true">
+        {index}
+      </span>
+      <div className="dashboard-card__body">
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <span className="dashboard-card__cta">{cta} →</span>
+      </div>
     </div>
   );
 }

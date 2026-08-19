@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import SheetSyncPanel from '../components/SheetSyncPanel';
 import { useSheetSync } from '../hooks/useSheetSync';
@@ -14,11 +13,8 @@ export default function EntrepreneursPage() {
       <Header />
       <div className="page-container">
         <SheetSyncPanel
-          title={
-            <>
-              <Link to="/">←</Link> {t('entrepreneurs.title')}
-            </>
-          }
+          eyebrow={t('entrepreneurs.eyebrow')}
+          title={t('entrepreneurs.title')}
           syncFn={runEntrepreneurSync}
           sheetSync={entrepreneurSync}
         />

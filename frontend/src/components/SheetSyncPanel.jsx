@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import DataTable from './DataTable';
 import FilterBar from './FilterBar';
 
@@ -10,31 +11,20 @@ import FilterBar from './FilterBar';
  * linked Sheet currently has (via the useSheetSync hook), so this component
  * never needs to know a form's fields ahead of time.
  */
-export default function SheetSyncPanel({ title, syncFn, sheetSync }) {
+export default function SheetSyncPanel({ eyebrow, title, syncFn, sheetSync }) {
   const { t } = useTranslation();
   const { sheetColumns, rows, loading, filters, setFilters, reload, clearFilters } = sheetSync;
   const [syncing, setSyncing] = useState(false);
   const [syncMessage, setSyncMessage] = useState(null);
 
   const columns = useMemo(
-    () => [
-      ...sheetColumns.map((col) => ({
+    () =>
+      sheetColumns.map((col) => ({
         key: col,
         label: col,
         render: (row) => row.fields?.[col] ?? ''
       })),
-      {
-        key: 'submittedAt',
-        label: t('sheetSync.columns.submittedAt'),
-        render: (row) => (row.submittedAt ? new Date(row.submittedAt).toLocaleString() : '')
-      },
-      {
-        key: 'syncedAt',
-        label: t('sheetSync.columns.syncedAt'),
-        render: (row) => (row.syncedAt ? new Date(row.syncedAt).toLocaleString() : '')
-      }
-    ],
-    [sheetColumns, t]
+    [sheetColumns]
   );
 
   const filterFields = useMemo(
@@ -70,7 +60,13 @@ export default function SheetSyncPanel({ title, syncFn, sheetSync }) {
   return (
     <div>
       <div className="page-header">
-        <h2>{title}</h2>
+        <div className="page-header__heading">
+          <Link to="/" className="back-link">
+            ← {t('common.backToDashboard')}
+          </Link>
+          {eyebrow && <span className="eyebrow">{eyebrow}</span>}
+          <h2>{title}</h2>
+        </div>
         <button type="button" className="btn" onClick={handleSync} disabled={syncing}>
           {syncing ? t('sheetSync.syncing') : t('sheetSync.syncNow')}
         </button>

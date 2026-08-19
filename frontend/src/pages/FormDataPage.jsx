@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import SheetSyncPanel from '../components/SheetSyncPanel';
 import { useSheetSync } from '../hooks/useSheetSync';
@@ -14,11 +13,8 @@ export default function FormDataPage() {
       <Header />
       <div className="page-container">
         <SheetSyncPanel
-          title={
-            <>
-              <Link to="/">←</Link> {t('formData.title')}
-            </>
-          }
+          eyebrow={t('formData.eyebrow')}
+          title={t('formData.title')}
           syncFn={runFormSync}
           sheetSync={sheetSync}
         />

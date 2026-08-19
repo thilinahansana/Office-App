@@ -9,21 +9,33 @@ export default function Dashboard() {
     <div>
       <Header />
       <div className="page-container">
-        <p>{t('dashboard.welcome')}</p>
+        <div className="page-intro">
+          <span className="eyebrow">{t('dashboard.eyebrow')}</span>
+          <h1>{t('dashboard.welcome')}</h1>
+        </div>
         <div className="dashboard-grid">
           <DashboardCard
+            icon="📋"
+            index={1}
             title={t('dashboard.formDataTitle')}
             description={t('dashboard.formDataDesc')}
+            cta={t('dashboard.openCta')}
             to="/form-data"
           />
           <DashboardCard
+            icon="🗓️"
+            index={2}
             title={t('dashboard.monthlyWorkTitle')}
             description={t('dashboard.monthlyWorkDesc')}
+            cta={t('dashboard.openCta')}
             to="/monthly-work"
           />
           <DashboardCard
+            icon="👥"
+            index={3}
             title={t('dashboard.entrepreneursTitle')}
             description={t('dashboard.entrepreneursDesc')}
+            cta={t('dashboard.openCta')}
             to="/entrepreneurs"
           />
         </div>

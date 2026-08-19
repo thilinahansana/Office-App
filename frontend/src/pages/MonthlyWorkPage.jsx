@@ -157,9 +157,13 @@ export default function MonthlyWorkPage() {
       <Header />
       <div className="page-container">
         <div className="page-header">
-          <h2>
-            <Link to="/">←</Link> {t('monthlyWork.title')}
-          </h2>
+          <div className="page-header__heading">
+            <Link to="/" className="back-link">
+              ← {t('common.backToDashboard')}
+            </Link>
+            <span className="eyebrow">{t('monthlyWork.eyebrow')}</span>
+            <h2>{t('monthlyWork.title')}</h2>
+          </div>
           <div className="header-bar__actions">
             <button type="button" className="btn btn-secondary" onClick={handlePrint}>
               {t('common.print')}
@@ -322,8 +326,6 @@ export default function MonthlyWorkPage() {
               <th>{t('monthlyWork.columns.venue')}</th>
               <th>{t('monthlyWork.columns.date')}</th>
               <th>{t('monthlyWork.columns.profitCount')}</th>
-              <th>{t('monthlyWork.columns.createdBy')}</th>
-              <th>{t('monthlyWork.columns.createdAt')}</th>
             </tr>
           </thead>
           <tbody>
@@ -334,8 +336,6 @@ export default function MonthlyWorkPage() {
                 <td>{item.venue}</td>
                 <td>{item.date ? new Date(item.date).toLocaleDateString() : ''}</td>
                 <td>{item.profitCount ?? ''}</td>
-                <td>{item.createdBy}</td>
-                <td>{item.createdAt ? new Date(item.createdAt).toLocaleDateString() : ''}</td>
               </tr>
             ))}
           </tbody>

@@ -41,6 +41,7 @@ export default function Login() {
         >
           <LanguageToggle />
         </div>
+        <span className="eyebrow login-card__eyebrow">{t("login.eyebrow")}</span>
         <h1>{t("login.title")}</h1>
         {error && <div className="form-error">{error}</div>}
         <form onSubmit={handleSubmit}>
