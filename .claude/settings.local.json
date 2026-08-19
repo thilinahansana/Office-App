@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp .env.example .env)",
+      "Bash(npm run *)",
+      "Bash(rm -rf dist .env)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/en.json'\\)\\); JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/si.json'\\)\\); console.log\\('locale JSON valid'\\)\")"
+    ]
+  }
+}
