@@ -18,7 +18,6 @@ export default function Dashboard() {
             icon="📋"
             index={1}
             title={t('dashboard.formDataTitle')}
-            description={t('dashboard.formDataDesc')}
             cta={t('dashboard.openCta')}
             to="/form-data"
           />
@@ -26,7 +25,6 @@ export default function Dashboard() {
             icon="🗓️"
             index={2}
             title={t('dashboard.monthlyWorkTitle')}
-            description={t('dashboard.monthlyWorkDesc')}
             cta={t('dashboard.openCta')}
             to="/monthly-work"
           />
@@ -34,7 +32,6 @@ export default function Dashboard() {
             icon="👥"
             index={3}
             title={t('dashboard.entrepreneursTitle')}
-            description={t('dashboard.entrepreneursDesc')}
             cta={t('dashboard.openCta')}
             to="/entrepreneurs"
           />

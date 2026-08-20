@@ -36,11 +36,8 @@
     "welcome": "ආයුබෝවන්",
     "openCta": "විවෘත කරන්න",
     "formDataTitle": "ලියාපදිංචි විස්තර",
-    "formDataDesc": "සමමුහුර්ත කරන ලද පෝරම ඉදිරිපත් කිරීම් බලන්න",
     "monthlyWorkTitle": "මාසික කටයුතු",
-    "monthlyWorkDesc": "මාසික කාර්ය අයිතම නිරීක්ෂණය කරන්න",
-    "entrepreneursTitle": "ව්‍යවසායක විස්තර",
-    "entrepreneursDesc": "ව්‍යවසායක වාර්තා කළමනාකරණය කරන්න"
+    "entrepreneursTitle": "ව්‍යවසායක විස්තර"
   },
   "formData": {
     "eyebrow": "පෝරම ඉදිරිපත් කිරීම්",

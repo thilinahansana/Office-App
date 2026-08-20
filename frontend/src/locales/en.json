@@ -36,11 +36,8 @@
     "welcome": "Welcome",
     "openCta": "Open",
     "formDataTitle": "Registration Details",
-    "formDataDesc": "View synced form submissions",
     "monthlyWorkTitle": "Monthly Work",
-    "monthlyWorkDesc": "Track monthly work items",
-    "entrepreneursTitle": "Entrepreneur Details",
-    "entrepreneursDesc": "Manage entrepreneur records"
+    "entrepreneursTitle": "Entrepreneur Details"
   },
   "formData": {
     "eyebrow": "Form Submissions",

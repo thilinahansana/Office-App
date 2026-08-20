@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-export default function DashboardCard({ icon, index, title, description, cta, to }) {
+export default function DashboardCard({ icon, index, title, cta, to }) {
   const navigate = useNavigate();
 
   return (
@@ -21,7 +21,6 @@ export default function DashboardCard({ icon, index, title, description, cta, to
       </span>
       <div className="dashboard-card__body">
         <h3>{title}</h3>
-        <p>{description}</p>
         <span className="dashboard-card__cta">{cta} →</span>
       </div>
     </div>
