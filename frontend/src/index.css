@@ -1,4 +1,5 @@
 :root {
+  font-size: 18px;
   --color-bg-start: #eaf7f1;
   --color-bg-end: #f3fbff;
   --color-blob-1: rgba(45, 178, 105, 0.14);
@@ -66,12 +67,22 @@
    network fetch for a webfont. */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI Variable', 'Segoe UI', 'Noto Sans Sinhala', Roboto,
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI",
+    "Noto Sans Sinhala", Roboto, sans-serif;
   color: var(--color-text);
   background-color: var(--color-bg-end);
-  background-image: radial-gradient(1100px circle at 8% -10%, var(--color-blob-1), transparent 42%),
-    radial-gradient(900px circle at 108% 8%, var(--color-blob-2), transparent 45%),
+  background-image:
+    radial-gradient(
+      1100px circle at 8% -10%,
+      var(--color-blob-1),
+      transparent 42%
+    ),
+    radial-gradient(
+      900px circle at 108% 8%,
+      var(--color-blob-2),
+      transparent 45%
+    ),
     linear-gradient(180deg, var(--color-bg-start), var(--color-bg-end));
   background-attachment: fixed;
   min-height: 100vh;
@@ -114,10 +125,17 @@ textarea {
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-accent-2)
+  );
   color: white;
   box-shadow: var(--shadow-xs);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
 }
 
 .btn:hover:not(:disabled) {
@@ -155,7 +173,11 @@ textarea {
 }
 
 .btn.btn-danger {
-  background: linear-gradient(135deg, var(--color-danger), var(--color-danger-2));
+  background: linear-gradient(
+    135deg,
+    var(--color-danger),
+    var(--color-danger-2)
+  );
 }
 
 .btn.btn-danger:hover:not(:disabled) {
@@ -169,7 +191,9 @@ textarea {
   background: var(--color-surface);
   color: var(--color-text);
   width: 100%;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .input-field:focus {
@@ -205,7 +229,13 @@ textarea {
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   border-bottom: 3px solid transparent;
-  border-image: linear-gradient(90deg, var(--color-accent-2), var(--color-accent), var(--color-accent-3)) 1;
+  border-image: linear-gradient(
+      90deg,
+      var(--color-accent-2),
+      var(--color-accent),
+      var(--color-accent-3)
+    )
+    1;
   box-shadow: var(--shadow-xs);
 }
 
@@ -218,7 +248,7 @@ textarea {
 }
 
 .header-bar__logo {
-  height: 34px;
+  height: 60px;
   width: auto;
   margin-right: 0.6rem;
   object-fit: contain;
@@ -256,7 +286,10 @@ textarea {
   align-items: center;
   border-width: 2px;
   border-style: solid;
-  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+  transition:
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
 }
 
 .dashboard-card:hover {
@@ -477,7 +510,9 @@ textarea {
   color: var(--color-text-muted);
   text-decoration: none;
   margin-bottom: 0.6rem;
-  transition: color 0.15s ease, transform 0.15s ease;
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
 }
 
 .back-link:hover {
@@ -491,8 +526,17 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  background-image: radial-gradient(900px circle at 15% 10%, var(--color-blob-1), transparent 45%),
-    radial-gradient(800px circle at 85% 90%, var(--color-blob-2), transparent 45%);
+  background-image:
+    radial-gradient(
+      900px circle at 15% 10%,
+      var(--color-blob-1),
+      transparent 45%
+    ),
+    radial-gradient(
+      800px circle at 85% 90%,
+      var(--color-blob-2),
+      transparent 45%
+    );
 }
 
 .login-card {
@@ -509,13 +553,18 @@ textarea {
 }
 
 .login-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, var(--color-accent-2), var(--color-accent), var(--color-accent-3));
+  background: linear-gradient(
+    90deg,
+    var(--color-accent-2),
+    var(--color-accent),
+    var(--color-accent-3)
+  );
 }
 
 .login-card__logo {
@@ -616,11 +665,17 @@ textarea {
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 600;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
 }
 
 .lang-toggle button.active {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-accent-2)
+  );
   color: white;
 }
 
@@ -649,7 +704,10 @@ textarea {
 .work-card {
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+  transition:
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
   display: flex;
   flex-direction: column;
 }
@@ -795,7 +853,6 @@ textarea {
   font-size: 0.78rem;
   margin: -0.15rem 0 0.5rem;
 }
-
 
 .slideshow {
   margin: 1rem 0 1.5rem;

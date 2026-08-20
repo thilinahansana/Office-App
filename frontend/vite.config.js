@@ -15,8 +15,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Office Data Tracker',
-        short_name: 'OfficeApp',
+        name: 'Vidatha Data Base',
+        short_name: 'Vidatha DB',
         description: 'Internal bilingual data tracking app',
         start_url: '/',
         display: 'standalone',
